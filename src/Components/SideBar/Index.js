@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import logo from "../../Resources/logo.png";
+
 
 function Index() {
   const [activeItem, setActiveItem] = useState("Home");
@@ -14,7 +14,7 @@ function Index() {
       className="d-flex flex-column flex-shrink-0 p-3 bg-light"
       style={{ width: "280px" }}
     >
-      <img className="m-auto" src={logo} style={{ width: "50px" }} alt="Logo" />
+      <img className="m-auto" src="" style={{ width: "50px" }} alt="Logo" />
       <hr />
       <ul className="nav nav-pills flex-column mb-auto">
         <li

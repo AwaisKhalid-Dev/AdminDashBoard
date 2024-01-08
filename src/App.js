@@ -1,4 +1,3 @@
-import logo from "./Resources/logo.png";
 import "./App.css";
 import { VscAccount } from "react-icons/vsc";
 import SideBar from "./Components/SideBar";
