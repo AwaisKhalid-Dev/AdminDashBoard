@@ -1,0 +1,36 @@
+{
+  "color": [ "#fb9440", "#5034f3", "#2dce9e", "#f5454e"],
+  "title": {
+    "text": "Callers",
+    "subtext": "Data",
+    "left": "center"
+  },
+  "tooltip": {
+    "trigger": "item"
+  },
+  "legend": {
+    "orient": "vertical",
+    "left": "left"
+  },
+  "series": [
+    {
+      "center": ["50%", "70%"],
+      "name": "Access From",
+      "type": "pie",
+      "radius": "50%",
+      "data": [
+        { "value": 735, "name": "Total" },
+        { "value": 580, "name": "Solved" },
+        { "value": 484, "name": "Open" },
+        { "value": 735, "name": "Escalate" }
+      ],
+      "emphasis": {
+        "itemStyle": {
+          "shadowBlur": 10,
+          "shadowOffsetX": 0,
+          "shadowColor": "rgba(0, 0, 0, 0.5)"
+        }
+      }
+    }
+  ]
+}
