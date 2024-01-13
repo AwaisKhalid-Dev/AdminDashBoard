@@ -1,7 +1,7 @@
 import "./App.css";
 import { VscAccount } from "react-icons/vsc";
 import Navbar from "./Components/Navbar";
-import SideBar from "./Components/SideBar";
+// import SideBar from "./Components/SideBar";
 import Card from "./Components/Card";
 import LineGraph from "./Components/Graphs/LineGraph";
 import PieGraph from "./Components/Graphs/PieGraph";
@@ -98,7 +98,7 @@ function App() {
           {/* Sidebar */}
          <div class="min-height-100 bg-gradiant-primary position-absolute w-100"></div>
           <div  className="wth-20">
-            <SideBar/>
+           {/* <SideBar/>*/}
           </div>
           <div  className="wth-80">
             <Navbar/>
