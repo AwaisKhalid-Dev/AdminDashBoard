@@ -748,7 +748,7 @@ function Dashboard() {
       >
         {!customerID && showScanner && (
           <div>
-            <h2 className="text-xl font-semibold my-5 text-wrap text-slate-500">
+            <h2 className="text-lg font-semibold my-5 text-wrap text-slate-500">
               Scan QR Or Enter Customer Id Manualy
             </h2>
             <div className="flex justify-center mb-4 ">
