@@ -11,8 +11,6 @@ const autherList = lazy(() => import("../Pages/AutherList"));
 const Login = lazy(() => import("../Pages/Login"));
 const ScanQR = lazy(() => import("../Pages/ScanQR"));
 
-
-
 function RoutesComponent() {
   return (
     <div>
@@ -24,17 +22,13 @@ function RoutesComponent() {
               <PrivateRoute component={dashboard} layout={PanelLayout} />
             }
           />
-           <Route
+          <Route
             path="/"
-            element={
-              <PrivateRoute component={Login} layout={DefaultLayout}  />
-            }
+            element={<PrivateRoute component={Login} layout={DefaultLayout} />}
           />
-           <Route
+          <Route
             path="/scanqr"
-            element={
-              <PrivateRoute component={ScanQR} layout={DefaultLayout}  />
-            }
+            element={<PrivateRoute component={ScanQR} layout={DefaultLayout} />}
           />
           {/* <Route
             path="/autherList"
@@ -42,7 +36,6 @@ function RoutesComponent() {
               <PrivateRoute component={autherList} layout={PanelLayout} />
             }
           /> */}
-
         </Routes>
       </BrowserRouter>
     </div>

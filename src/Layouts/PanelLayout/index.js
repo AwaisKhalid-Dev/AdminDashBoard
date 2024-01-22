@@ -6,7 +6,7 @@ function DashboardLayout({ children }) {
   return (
     <>
       <div className="container-fluid bg-body">
-        <div className="row" style={{padding:'0px'}}>
+        <div className="row" style={{ padding: "0px" }}>
           <div className="position-fixed">
             <div className="wth-20">
               <LeftSidebar />

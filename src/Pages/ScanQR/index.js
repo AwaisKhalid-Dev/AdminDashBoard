@@ -17,9 +17,8 @@ function Dashboard() {
   const [errorMessage, setErrorMessage] = useState("");
   const qrScannerRef = useRef(null);
 
-  
-  useEffect(() => {    
-    if (inputMode === "scanner" && showScanner) { 
+  useEffect(() => {
+    if (inputMode === "scanner" && showScanner) {
       qrScannerRef.current = new Html5QrcodeScanner(
         "qr-reader",
         { fps: 10, qrbox: 250 },
@@ -27,7 +26,7 @@ function Dashboard() {
       );
       qrScannerRef.current.render(onScanSuccess, onScanError);
     }
-  
+
     // Cleanup function
     return () => {
       if (qrScannerRef.current) {
@@ -35,10 +34,7 @@ function Dashboard() {
         qrScannerRef.current = null;
       }
     };
-  }, [inputMode, showScanner]); 
-
-
-
+  }, [inputMode, showScanner]);
 
   const isValidHttpUrl = (string) => {
     let url;
@@ -58,7 +54,6 @@ function Dashboard() {
 
   const ShowTable = () => {
     setShowTable(!showTable);
-    
   };
 
   const handleInputChange = (e) => {
@@ -69,23 +64,21 @@ function Dashboard() {
   const handleGoClick = (e) => {
     if (!isValidCustomerId(manualId)) {
       setErrorMessage("Invalid ID. Please enter a valid ID.");
-    } 
-    else {
+    } else {
       setCustomerID(manualId);
-    setShowScanner(false); 
-    setErrorMessage(""); 
+      setShowScanner(false);
+      setErrorMessage("");
     }
   };
 
   const searchAnotherCustomer = () => {
     setCustomerID(null);
-    setShowScanner(true); 
+    setShowScanner(true);
     setShowTable(false);
-    setInputMode('scanner');
-    setManualId(""); 
+    setInputMode("scanner");
+    setManualId("");
     setScannedCode("");
-  
-    
+
     if (qrScannerRef.current) {
       qrScannerRef.current.clear();
       qrScannerRef.current.render(onScanSuccess, onScanError);
@@ -98,18 +91,14 @@ function Dashboard() {
       window.location.href = decodedText;
     } else {
       setCustomerID(decodedText);
-      setShowScanner(false); 
-      setShowTable(true); 
+      setShowScanner(false);
+      setShowTable(true);
     }
   };
   const onScanError = (error) => {
     console.error("Error scanning QR:", error);
     setErrorMessage("");
-  };  
-
-  
-
-  
+  };
 
   const StaticData = [
     {
@@ -780,16 +769,17 @@ function Dashboard() {
                 <div id="qr-reader" className="w-[300px]"></div>
               </div>
             ) : (
-              
               <div className="flex justify-center flex-col items-center">
                 <input
                   type="text"
                   placeholder="Enter ID Here"
-                  className="shadow border rounded py-2 px-3 text-gray-700 mb-2" for spacing
+                  className="shadow border rounded py-2 px-3 text-gray-700 mb-2"
+                  for
+                  spacing
                   value={manualId}
                   onChange={handleInputChange}
                 />
-                
+
                 {errorMessage && (
                   <div className="text-red-500 mb-2">{errorMessage}</div>
                 )}
