@@ -49,7 +49,7 @@ function Login() {
                 token:"token",
                 user:{
                     id:"1",
-                    role:"gfhhjj",
+                    role:"user",
                     name:"awais",
                     email:"dev.awaiskhalid@gmail.com",
                 },
