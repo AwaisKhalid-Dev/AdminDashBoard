@@ -1,27 +1,27 @@
 [
   {
-    "cardType": "Total Calls",
+    "cardType": "Total Debit",
     "totalSales": "30K",
     "percentage": "+5%",
     "history": "/ last week",
     "icon": "SlCallIn"  
   },
   {
-    "cardType": "Solved",
+    "cardType": "Total Credit",
     "totalSales": "2500",
     "percentage": "+10%",
     "history": "/ last month",
     "icon": "MdOutlineSecurityUpdateGood"
   },
   {
-    "cardType": "Open",
+    "cardType": "Total Baki",
     "totalSales": "500",
     "percentage": "+15%",
     "history": "/ last month",
     "icon": "GrInProgress"
   },
   {
-    "cardType": "Escalate",
+    "cardType": "Kawasan Seewan",
     "totalSales": "1050",
     "percentage": "+100%",
     "history": "/ last month",
