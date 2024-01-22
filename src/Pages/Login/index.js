@@ -113,7 +113,7 @@ function Login() {
           <div className="flex items-center justify-center">
             <button
               type="submit"
-              className="bg-blue-500 hover:bg-blue-700 text-white font-bold lg:w-[50%] h-[35px] rounded focus:outline-none focus:shadow-outline"
+              className="bg-blue-500 hover:bg-blue-700 text-white font-bold w-[200px] h-[35px] rounded focus:outline-none focus:shadow-outline"
             >
               Log In
             </button>
