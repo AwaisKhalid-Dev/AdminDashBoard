@@ -1,4 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
+import { useNavigate } from "react-router-dom";
+
 import { Html5QrcodeScanner } from "html5-qrcode";
 import profile1 from "../../assets/images/profile1.jpeg";
 import profile2 from "../../assets/images/profile2.jpeg";
@@ -8,6 +10,8 @@ import profile5 from "../../assets/images/profile5.jpeg";
 import profile6 from "../../assets/images/profile6.jpeg";
 
 function Dashboard() {
+  const navigate = useNavigate();
+
   const [manualId, setManualId] = useState("");
   const [customerID, setCustomerID] = useState(null);
   const [scannedCode, setScannedCode] = useState("");
@@ -100,6 +104,10 @@ function Dashboard() {
     setErrorMessage("");
   };
 
+  const handleViewBillingHistoryClick = (customerID) => {
+    navigate("/billinghistory", { state: { customerID } });
+  };
+
   const StaticData = [
     {
       id: 10267,
@@ -113,8 +121,8 @@ function Dashboard() {
     {
       id: 20550,
       name: "John",
-      phone: "6745",
-      account: "DownTown",
+      phone: "+60198032355",
+      account: "235634",
       area: "51200 KUALA LAMPUR",
       profile: profile2,
     },
@@ -122,8 +130,8 @@ function Dashboard() {
     {
       id: 15689,
       name: "Vue",
-      phone: "3245",
-      account: "CityCenter",
+      phone: "+60197054507",
+      account: "100067",
       area: "51200 KUALA LAMPUR",
       profile: profile3,
     },
@@ -131,8 +139,8 @@ function Dashboard() {
     {
       id: 40012,
       name: "Harry",
-      phone: "9006",
-      account: "Capital",
+      phone: "+60199927653",
+      account: "339269",
       area: "51200 KUALA LAMPUR",
       profile: profile4,
     },
@@ -140,8 +148,8 @@ function Dashboard() {
     {
       id: 14452,
       name: "Poul",
-      phone: "2366",
-      account: "MainCity",
+      phone: "+60197054567",
+      account: "135289",
       area: "51200 KUALA LAMPUR",
       profile: profile5,
     },
@@ -149,8 +157,8 @@ function Dashboard() {
     {
       id: 99826,
       name: "Vicky",
-      phone: "2543",
-      account: "Kuala Lumpur",
+      phone: "+60197054567",
+      account: "098732",
       area: "51200 KUALA LAMPUR",
       profile: profile6,
     },
@@ -733,7 +741,7 @@ function Dashboard() {
       <div
         className={`${
           !customerID && showScanner ? "screen-h" : ""
-        } flex items-center justify-center`}     //
+        } flex items-center justify-center`}
       >
         {!customerID && showScanner && (
           <div>
@@ -795,10 +803,10 @@ function Dashboard() {
           </div>
         )}
       </div>
-      {/*   <p>{scannedCode}</p> */}         
+      {/*   <p>{scannedCode}</p> */}
       {/* table */}
       {/* profile */}
-      <div className="w-full flex justify-center">
+      {/* <div className="w-full flex justify-center">
         {customerID && (
           <button
             onClick={searchAnotherCustomer}
@@ -807,7 +815,7 @@ function Dashboard() {
             Search Another Customer
           </button>
         )}
-      </div>
+      </div> */}
       {customerID && (
         <div class="flex items-center sm:w-auto w-full justify-center">
           <div class=" sm:w-[425px]  w-full">
@@ -862,14 +870,22 @@ function Dashboard() {
                 </table>
 
                 <div class="text-center my-3">
-                  <button
-                    onClick={ShowTable}
+                  {/* <button
+                    // onClick={ShowTable}
+                    onClick={() => navigate('/billinghistory')}
                     class="text-xs text-indigo-500 italic hover:underline hover:text-indigo-600 font-medium"
                   >
                     {" "}
                     {showTable
                       ? "Hide Billing History"
                       : "View Billing History"}{" "}
+                  </button> */}
+
+                  <button
+                    className="text-xs text-indigo-500 italic hover:underline hover:text-indigo-600 font-medium"
+                    onClick={() => handleViewBillingHistoryClick(customerID)}
+                  >
+                    View Billing History
                   </button>
                 </div>
               </div>

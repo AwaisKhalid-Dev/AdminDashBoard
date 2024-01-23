@@ -10,6 +10,8 @@ const dashboard = lazy(() => import("../Pages/Dashboard"));
 const autherList = lazy(() => import("../Pages/AutherList"));
 const Login = lazy(() => import("../Pages/Login"));
 const ScanQR = lazy(() => import("../Pages/ScanQR"));
+const BillingHistory = lazy(() => import("../Pages/BillingHistory"));
+
 
 function RoutesComponent() {
   return (
@@ -29,6 +31,10 @@ function RoutesComponent() {
           <Route
             path="/scanqr"
             element={<PrivateRoute component={ScanQR} layout={DefaultLayout} />}
+          />
+          <Route
+            path="/billinghistory"
+            element={<PrivateRoute component={BillingHistory} layout={DefaultLayout} />}
           />
           {/* <Route
             path="/autherList"
