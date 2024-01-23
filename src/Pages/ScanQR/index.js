@@ -104,54 +104,54 @@ function Dashboard() {
     {
       id: 10267,
       name: "Harry",
-      meter: "5667",
-      origin: "Gombak",
-      adress: "51200 KUALA LAMPUR",
+      phone: "+60197054567",
+      account: "233664",
+      area: "51200 KUALA LAMPUR",
       profile: profile1,
     },
 
     {
       id: 20550,
       name: "John",
-      meter: "6745",
-      origin: "DownTown",
-      adress: "51200 KUALA LAMPUR",
+      phone: "6745",
+      account: "DownTown",
+      area: "51200 KUALA LAMPUR",
       profile: profile2,
     },
 
     {
       id: 15689,
       name: "Vue",
-      meter: "3245",
-      origin: "CityCenter",
-      adress: "51200 KUALA LAMPUR",
+      phone: "3245",
+      account: "CityCenter",
+      area: "51200 KUALA LAMPUR",
       profile: profile3,
     },
 
     {
       id: 40012,
       name: "Harry",
-      meter: "9006",
-      origin: "Capital",
-      adress: "51200 KUALA LAMPUR",
+      phone: "9006",
+      account: "Capital",
+      area: "51200 KUALA LAMPUR",
       profile: profile4,
     },
 
     {
       id: 14452,
       name: "Poul",
-      meter: "2366",
-      origin: "MainCity",
-      adress: "51200 KUALA LAMPUR",
+      phone: "2366",
+      account: "MainCity",
+      area: "51200 KUALA LAMPUR",
       profile: profile5,
     },
 
     {
       id: 99826,
       name: "Vicky",
-      meter: "2543",
-      origin: "Kuala Lumpur",
-      adress: "51200 KUALA LAMPUR",
+      phone: "2543",
+      account: "Kuala Lumpur",
+      area: "51200 KUALA LAMPUR",
       profile: profile6,
     },
   ];
@@ -737,7 +737,7 @@ function Dashboard() {
       >
         {!customerID && showScanner && (
           <div>
-            <h2 className="text-lg font-semibold my-5 text-wrap text-slate-500">
+            <h2 className="md:text-lg text-md font-semibold my-5 text-wrap text-slate-500">
               Scan QR Or Enter Customer Id Manualy
             </h2>
             <div className="flex justify-center mb-4 ">
@@ -795,7 +795,7 @@ function Dashboard() {
           </div>
         )}
       </div>
-      <p>{scannedCode}</p>
+      {/* <p>{scannedCode}</p> */}         
       {/* table */}
       {/* profile */}
       <div className="w-full flex justify-center">
@@ -810,8 +810,8 @@ function Dashboard() {
       </div>
       {customerID && (
         <div class="flex items-center h-screen w-full justify-center">
-          <div class="max-w-xs">
-            <div class="bg-white shadow-xl rounded-lg py-3">
+          <div class="max-w-xs sm:w-suto w-full">
+            <div class="bg-white shadow-xl  rounded-lg py-3">
               <div class="photo-wrapper p-2">
                 <img
                   class="w-32 h-32 rounded-full mx-auto"
@@ -830,32 +830,32 @@ function Dashboard() {
                       <td class="px-2 py-2 text-gray-500 font-semibold">
                         Name
                       </td>
-                      <td class="px-2 py-2">
+                      <td class="px-4 py-2">
                         {StaticData[filteredCustomerIndex]?.name || "N/A"}
                       </td>
                     </tr>
                     <tr>
                       <td class="px-2 py-2 text-gray-500 font-semibold">
-                        Meter No:
+                        Phone No:
                       </td>
-                      <td class="px-2 py-2">
-                        {StaticData[filteredCustomerIndex]?.meter || "N/A"}
-                      </td>
-                    </tr>
-                    <tr>
-                      <td class="px-2 py-2 text-gray-500 font-semibold">
-                        Origin:
-                      </td>
-                      <td class="px-2 py-2">
-                        {StaticData[filteredCustomerIndex]?.origin || "N/A"}
+                      <td class="px-4 py-2">
+                        {StaticData[filteredCustomerIndex]?.phone || "N/A"}
                       </td>
                     </tr>
                     <tr>
                       <td class="px-2 py-2 text-gray-500 font-semibold">
-                        Address:
+                        Account:
                       </td>
-                      <td class="px-2 py-2">
-                        {StaticData[filteredCustomerIndex]?.adress || "N/A"}
+                      <td class="px-4 py-2">
+                        {StaticData[filteredCustomerIndex]?.account || "N/A"}
+                      </td>
+                    </tr>
+                    <tr>
+                      <td class="px-2 py-2 text-gray-500 font-semibold">
+                        Area:
+                      </td>
+                      <td class="px-4 py-2">
+                        {StaticData[filteredCustomerIndex]?.area || "N/A"}
                       </td>
                     </tr>
                   </tbody>

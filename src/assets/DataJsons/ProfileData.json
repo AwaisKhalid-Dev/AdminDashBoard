@@ -1,0 +1,50 @@
+[
+    {
+        "id": 10267,
+        "name": "Harry",
+        "meter": "5667",
+        "origin": "Gombak",
+        "address": "51200 KUALA LAMPUR",
+        "profile": "images/profile1.jpeg"
+    },
+    {
+        "id": 20550,
+        "name": "John",
+        "meter": "6745",
+        "origin": "DownTown",
+        "address": "51200 KUALA LAMPUR",
+        "profile": "profile2"
+    },
+    {
+        "id": 15689,
+        "name": "Vue",
+        "meter": "3245",
+        "origin": "CityCenter",
+        "address": "51200 KUALA LAMPUR",
+        "profile": "profile3"
+    },
+    {
+        "id": 40012,
+        "name": "Harry",
+        "meter": "9006",
+        "origin": "Capital",
+        "address": "51200 KUALA LAMPUR",
+        "profile": "profile4"
+    },
+    {
+        "id": 14452,
+        "name": "Poul",
+        "meter": "2366",
+        "origin": "MainCity",
+        "address": "51200 KUALA LAMPUR",
+        "profile": "profile5"
+    },
+    {
+        "id": 99826,
+        "name": "Vicky",
+        "meter": "2543",
+        "origin": "Kuala Lumpur",
+        "address": "51200 KUALA LAMPUR",
+        "profile": "profile6"
+    }
+]
