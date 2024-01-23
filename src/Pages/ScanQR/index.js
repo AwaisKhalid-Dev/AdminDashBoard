@@ -806,7 +806,7 @@ function Dashboard() {
       {/*   <p>{scannedCode}</p> */}
       {/* table */}
       {/* profile */}
-      {/* <div className="w-full flex justify-center">
+      <div className="w-full flex justify-center">
         {customerID && (
           <button
             onClick={searchAnotherCustomer}
@@ -815,7 +815,7 @@ function Dashboard() {
             Search Another Customer
           </button>
         )}
-      </div> */}
+      </div>
       {customerID && (
         <div class="flex items-center sm:w-auto w-full justify-center">
           <div class=" sm:w-[425px]  w-full">
