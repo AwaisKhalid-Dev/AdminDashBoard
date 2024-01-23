@@ -897,7 +897,7 @@ function Dashboard() {
       {/* table */}
       {showTable && (
         <div className="overflow-x-auto">
-          <table className="min-w-full bg-white">
+          {/* <table className="min-w-full bg-white">
             <thead className="bg-gray-800 text-white">
               <tr>
                 <th className="text-left py-3 px-4 uppercase font-semibold text-sm">
@@ -932,7 +932,7 @@ function Dashboard() {
                 </tr>
               ))}
             </tbody>
-          </table>
+          </table> */}
         </div>
       )}
       {/* table */}
