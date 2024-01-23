@@ -729,11 +729,11 @@ function Dashboard() {
   );
 
   return (
-    <div className="container mx-auto p-4">
+    <div className="sm:p-5 p-0 mx-auto">
       <div
         className={`${
           !customerID && showScanner ? "screen-h" : ""
-        } flex items-center justify-center my-5`}
+        } flex items-center justify-center`}     //
       >
         {!customerID && showScanner && (
           <div>
@@ -795,22 +795,22 @@ function Dashboard() {
           </div>
         )}
       </div>
-      {/* <p>{scannedCode}</p> */}         
+      {/*   <p>{scannedCode}</p> */}         
       {/* table */}
       {/* profile */}
       <div className="w-full flex justify-center">
         {customerID && (
           <button
             onClick={searchAnotherCustomer}
-            className="mx-auto bg-[#1f2937] rounded p-3 shadow-sm text-white"
+            className="mx-auto bg-[#1f2937] rounded p-2.5 mt-2 text-sm shadow-sm text-white"
           >
             Search Another Customer
           </button>
         )}
       </div>
       {customerID && (
-        <div class="flex items-center h-screen w-full justify-center">
-          <div class="max-w-xs sm:w-suto w-full">
+        <div class="flex items-center sm:w-auto w-full justify-center">
+          <div class=" sm:w-[425px]  w-full">
             <div class="bg-white shadow-xl  rounded-lg py-3">
               <div class="photo-wrapper p-2">
                 <img
