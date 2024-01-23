@@ -51,13 +51,22 @@ function Login() {
         },
       };
 
-      if (response.user.role === "admin") {
+      if (id === "admin" && password === "admin") {
         navigate("/adminDashboard");
-      } else if (response.user.role === "user") {
+      } else if (id === "user" && password === "user") {
         navigate("/scanqr");
       } else {
-        alert("invalid user role");
-        navigate("/");
+        alert("Invalid ID or Password");
+
+
+
+      // if (response.user.role === "admin") {
+      //   navigate("/adminDashboard");
+      // } else if (response.user.role === "user") {
+      //   navigate("/scanqr");
+      // } else {
+      //   alert("invalid user role");
+      //   navigate("/");
       }
     }
   };
